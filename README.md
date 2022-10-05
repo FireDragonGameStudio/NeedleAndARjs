@@ -15,7 +15,7 @@ Pls note that this is just a POC. I won't provide actual support for this, apart
 - Add an empty GameObject to the SceneRoot and name it ARjsMarkerTracking.
 - Add the Unity component to an empty GameObject in your scene.
 - Create a new Sphere as Trackable and link it to your ARjsMarkerTracking component.
-- !!!In VSCode open the style.css and change the ´´´background-color´´´ property of ´´´#main´´´ from black to transparent!!! Otherwise your camera image will not be visible.
+- !!!In VSCode open the style.css and change the ```background-color``` property of ```#main``` from black to transparent!!! Otherwise your camera image will not be visible.
 - Wait for Unity to rebuild and launch it on your local machine to test. :)
 
 # Issues
