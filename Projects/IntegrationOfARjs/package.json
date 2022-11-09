@@ -2,18 +2,18 @@
   "name": "my-project",
   "version": "1.0.0",
   "scripts": {
-	  "start": "vite --host",
-	  "build:dev": "tsc && vite build && npm run copy-files",
-	  "build:production": "npm run build:dev && npm run pack-gltf",
-	  "serve": "vite preview",
-	  "copy-files": "copy-files-from-to",
-	  "pack-gltf": "npm run pack-gltf --prefix node_modules/@needle-tools/engine"
-	},
+    "start": "vite --host",
+    "build:dev": "tsc && vite build && npm run copy-files",
+    "build:production": "npm run build:dev && npm run pack-gltf",
+    "serve": "vite preview",
+    "copy-files": "copy-files-from-to",
+    "pack-gltf": "npm run pack-gltf --prefix node_modules/@needle-tools/engine"
+  },
   "dependencies": {
-	  "@ar-js-org/ar.js": "^3.4.0",
-	  "@needle-tools/engine": "file:../../Library/PackageCache/com.needle.engine@2.25.1-pre/package~",
-	  "three": "file:../../Library/PackageCache/com.needle.engine@2.25.0-pre/package~/node_modules/three"
-	},
+    "@ar-js-org/ar.js": "^3.4.1",
+    "@needle-tools/engine": "file:../../Library/PackageCache/com.needle.engine@2.41.0-pre/package~",
+    "three": "file:../../Library/PackageCache/com.needle.engine@2.41.0-pre/package~/node_modules/three"
+  },
   "devDependencies": {
     "@gltf-transform/cli": "^2.1.7",
     "@gltf-transform/functions": "^2.1.7",

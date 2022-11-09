@@ -84,16 +84,16 @@ export class ARTest extends Behaviour {
             markerGroup.add(this.trackableGameObject);
         }
 
-        // add THREE object
-        var geometry	= new THREE.BoxGeometry(1,1,1);
-        var material	= new THREE.MeshNormalMaterial({
-            transparent : true,
-            opacity: 0.5,
-            side: THREE.DoubleSide
-        });
-        var mesh = new THREE.Mesh( geometry, material );
-        mesh.position.y	= geometry.parameters.height/2
-        markerGroup.add(mesh);
+        // add THREE object via three.js
+        // var geometry	= new THREE.BoxGeometry(1,1,1);
+        // var material	= new THREE.MeshNormalMaterial({
+        //     transparent : true,
+        //     opacity: 0.5,
+        //     side: THREE.DoubleSide
+        // });
+        // var mesh = new THREE.Mesh( geometry, material );
+        // mesh.position.y	= geometry.parameters.height/2
+        // markerGroup.add(mesh);
     }
 
     getSourceOrientation() {

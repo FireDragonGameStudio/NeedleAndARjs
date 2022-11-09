@@ -8,18 +8,18 @@
 
 vite v2.6.4 building for production...
 transforming...
-✓ 280 modules transformed.
+✓ 490 modules transformed.
 rendering chunks...
 dist/index.html                  1.30 KiB
 dist/assets/index.ff7c84e8.css   1.36 KiB / gzip: 0.57 KiB
-dist/assets/index.99ffa24e.js    479.59 KiB / gzip: 134.63 KiB
-dist/assets/vendor.9d6de8d9.js   2740.50 KiB / gzip: 899.83 KiB
+dist/assets/index.434c3ed7.js    559.55 KiB / gzip: 155.79 KiB
+dist/assets/vendor.ab945acb.js   4610.26 KiB / gzip: 1594.14 KiB
 
 ✨ [vite-plugin-compression]:algorithm=gzip - compressed file successfully: 
 ./dist/assets/index.ff7c84e8.css.gz   1.36kb / gzip: 0.57kb
 ./dist/index.html.gz                  1.30kb / gzip: 0.60kb
-./dist/assets/index.99ffa24e.js.gz    479.59kb / gzip: 134.28kb
-./dist/assets/vendor.9d6de8d9.js.gz   2740.50kb / gzip: 897.72kb
+./dist/assets/index.434c3ed7.js.gz    559.55kb / gzip: 155.37kb
+./dist/assets/vendor.ab945acb.js.gz   4610.26kb / gzip: 1591.24kb
 
 
 
@@ -74,7 +74,8 @@ Starting copy operation in "default" mode:
 > @needle-tools/engine@1.0.0-pre pack-gltf
 > node node_modules/@needle-tools/gltf-transform-extensions/index.mjs "C:\\\\\\\\Program Files (x86)\\\\\\\\KTX-Software\\\\\\\\bin"
 
-C:\\\\\\\\Program Files (x86)\\\\\\\\KTX-Software\\\\\\\\bin
+Failed parsing commandline args
+You can define a toktx search path by adding --toktxPath <path> to the command line. The command may appear multiple times
 Debug false
 Prefix basepath: C:\Users\marku\Documents\UnityProjects\NeedleAndARjs\Projects\IntegrationOfARjs
 GLB files in C:\Users\marku\Documents\UnityProjects\NeedleAndARjs\Projects\IntegrationOfARjs\dist\assets: [
@@ -86,9 +87,10 @@ READ NEEDLE_components
 READ NEEDLE_lightmaps
 READ NEEDLE_lighting_settings
 READ EXT_texture_exr
-RUN TOKTX
-Found KTX-Software v4.1.0-rc3.
-Texture 1/1 ()
+toktx: Found KTX-Software v4.1.0-rc3.
+toktx:texture(1/1): Slots → []
+[KHR_draco_mesh_compression] Compression options: {"method":1,"encodeSpeed":5,"decodeSpeed":5,"quantizationBits":{"POSITION":14,"NORMAL":10,"COLOR":8,"TEX_COORD":12,"GENERIC":12},"quantizationVolume":"mesh"}
+[KHR_draco_mesh_compression] Compressed 3 primitives.
 WRITE NEEDLE_gameobject_data
 WRITE NEEDLE_components
 WRITE NEEDLE_lightmaps

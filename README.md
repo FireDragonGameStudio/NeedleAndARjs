@@ -15,8 +15,13 @@ Pls note that this is just a POC. I won't provide actual support for this, apart
 - Add an empty GameObject to the SceneRoot and name it ARjsMarkerTracking.
 - Add the Unity component to an empty GameObject in your scene.
 - Create a new Sphere as Trackable and link it to your ARjsMarkerTracking component.
-- !!!In VSCode open the style.css and change the ```background-color``` property of ```#main``` from black to transparent!!! Otherwise your camera image will not be visible.
+- Open your project in VSCode via die VS Workspace button on the Export GameObject.
+- __In VSCode open the IntegrationOfARjs folder, select the style.css and change the ```background-color``` property of ```#main``` from black to transparent! (It's already changed in this repo) Otherwise your camera image will not be visible.__
 - Wait for Unity to rebuild and launch it on your local machine to test. :)
+
+## Where is the AR.js stuff located?
+
+When following the path  Projects/IntegrationOfARjs/src/scripts/ARjsMarkerTracking.ts you'll find the Typescript component for handling all the AR.js stuff. It's pretty straight forward, implementing a very basic sample and contains example code to add objects via three.js (from line 88 to 96). Feel free to add e.g. a normals-material cube, ...
 
 # Issues
 

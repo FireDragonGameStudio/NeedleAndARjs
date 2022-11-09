@@ -21,10 +21,7 @@ MonoBehaviour:
     Projects: []
     BuilderScene: 
   - Path: Assets/Scenes/Minimal.unity
-    Projects:
-    - ProjectPath: Library/Empty
+    Projects: []
     BuilderScene: 
   Projects:
-  - ProjectPath: Library/Empty
   - ProjectPath: Projects/IntegrationOfARjs
-  - ProjectPath: Library/CollabSandbox
