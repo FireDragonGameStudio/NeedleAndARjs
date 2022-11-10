@@ -1,7 +1,7 @@
-import { Behaviour, GameObject } from "@needle-tools/engine/engine-components/Component";
-import * as THREE from "three";
+import { Behaviour } from "@needle-tools/engine/engine-components/Component";
 import * as THREEx from "@ar-js-org/ar.js/three.js/build/ar-threex.js";
 import { serializeable } from "@needle-tools/engine";
+import { Group, Object3D } from "three";
 
 export class ARTest extends Behaviour {
 
@@ -9,8 +9,8 @@ export class ARTest extends Behaviour {
     arToolkitContext : THREEx.ArToolkitContext;
     arMarkerControls : THREEx.ArMarkerControls;
 
-    @serializeable(GameObject)
-    trackableGameObject: GameObject | null = null;
+    @serializeable(Object3D)
+    trackableGameObject: Object3D | null = null;
 
     start() {  
         this.arToolkitSource = new THREEx.ArToolkitSource({
@@ -72,11 +72,21 @@ export class ARTest extends Behaviour {
         });
 
         // MARKER
-        var markerGroup = new THREE.Group();
+        var markerGroup = new Group();
         this.context.scene.add(markerGroup);
         this.arMarkerControls = new THREEx.ArMarkerControls(this.arToolkitContext, markerGroup, {
+            // type of marker - ['pattern', 'barcode', 'unknown' ]
             type: 'pattern',
+            // url of the pattern - IIF type='pattern'
             patternUrl: THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
+            // turn on/off camera smoothing
+            smooth: true,
+            // number of matrices to smooth tracking over, more = smoother but slower follow
+            smoothCount: 5,
+            // distance tolerance for smoothing, if smoothThreshold # of matrices are under tolerance, tracking will stay still
+            smoothTolerance: 0.01,
+            // threshold for smoothing, will keep still unless enough matrices are over tolerance
+            smoothThreshold: 2
         });
         
         // add reference Unity gameObject
@@ -85,13 +95,13 @@ export class ARTest extends Behaviour {
         }
 
         // add THREE object via three.js
-        // var geometry	= new THREE.BoxGeometry(1,1,1);
-        // var material	= new THREE.MeshNormalMaterial({
+        // var geometry	= new BoxGeometry(1,1,1);
+        // var material	= new MeshNormalMaterial({
         //     transparent : true,
         //     opacity: 0.5,
-        //     side: THREE.DoubleSide
+        //     side: DoubleSide
         // });
-        // var mesh = new THREE.Mesh( geometry, material );
+        // var mesh = new Mesh( geometry, material );
         // mesh.position.y	= geometry.parameters.height/2
         // markerGroup.add(mesh);
     }
@@ -119,7 +129,7 @@ export class ARTest extends Behaviour {
     onResize() {
 		this.arToolkitSource.onResizeElement();
         this.arToolkitSource.copyElementSizeTo(this.context.renderer.domElement);
-        if (this.arToolkitContext.arController !== null) {
+        if (this.arToolkitContext.arController !== null && this.arToolkitContext.arController.canvas != null) {
             this.arToolkitSource.copyElementSizeTo(this.arToolkitContext.arController.canvas);
         }
 	}

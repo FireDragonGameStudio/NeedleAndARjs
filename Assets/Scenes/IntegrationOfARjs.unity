@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 706762906}
   - component: {fileID: 706762905}
   - component: {fileID: 706762904}
+  - component: {fileID: 706762907}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -338,6 +339,20 @@ Transform:
   m_Father: {fileID: 1597275518}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &706762907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706762903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff643486cb84b8194a9e9c5f3d71788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Needle.Engine.AdditionalData.CameraARData, Needle.Engine
+    $ GlobalObjectId_V1-2-f8bf6e5eb3be3c14b934d06fa38fee0a-706762907-0
+  ARBackgroundAlpha: 0
 --- !u!1 &784234922
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Needle.Typescript.GeneratedComponents.ARTest, Assembly-CSharp
     $ GlobalObjectId_V1-2-f8bf6e5eb3be3c14b934d06fa38fee0a-1804396150-0
-  trackableGameObject: {fileID: 584220945}
+  trackableGameObject: {fileID: 584220946}
 --- !u!114 &1911445426
 MonoBehaviour:
   m_ObjectHideFlags: 0

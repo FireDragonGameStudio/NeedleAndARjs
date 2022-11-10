@@ -10,7 +10,7 @@ namespace Needle.Typescript.GeneratedComponents
 		// public THREEx.ArToolkitSource @arToolkitSource; → Could not resolve C# type
 		// public THREEx.ArToolkitContext @arToolkitContext; → Could not resolve C# type
 		// public THREEx.ArMarkerControls @arMarkerControls; → Could not resolve C# type
-		public UnityEngine.GameObject @trackableGameObject;
+		public UnityEngine.Transform @trackableGameObject;
 		public void start(){}
 		public void update(){}
 		public void initARContext(){}

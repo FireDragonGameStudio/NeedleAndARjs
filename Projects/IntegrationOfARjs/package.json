@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@ar-js-org/ar.js": "^3.4.1",
-    "@needle-tools/engine": "file:../../Library/PackageCache/com.needle.engine@2.41.0-pre/package~",
+    "@needle-tools/engine": "file:../../Library/PackageCache/com.needle.engine@2.42.0-pre/package~",
     "three": "file:../../Library/PackageCache/com.needle.engine@2.41.0-pre/package~/node_modules/three"
   },
   "devDependencies": {
